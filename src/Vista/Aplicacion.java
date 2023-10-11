@@ -24,7 +24,7 @@ public class Aplicacion {
 		ArrayList<Sede> sedes = Loader.cargarSedes();
 		
 		System.out.println("Bienvenido!");
-		System.out.println("1. Cliente\n2. Administrador local\n3. Administrador general\n4. Registrarse");
+		System.out.println("1. Cliente\n2. Administrador local\n3. Administrador general");
 		int rol = Integer.parseInt(input("Seleccione la opcion para la que desea iniciar sesion o registrese si no tiene una cuenta"));
 		calculadora = new Empresa(clientes, admins, admin, sedes);
 		switch(rol) {
@@ -36,9 +36,6 @@ public class Aplicacion {
 				break;
 			case(3):
 				iniciarAdminGeneral();
-				break;
-			case(4):
-				registrarUsuario();
 				break;
 			default:
 				System.out.println("Esa opcion no es valida, vuelva a iniciar la aplicacion");
@@ -57,8 +54,12 @@ public class Aplicacion {
 				int desicion = Integer.parseInt(input("Que desea hacer"));
 				switch(desicion) {
 					case(1):
-						
-						calculadora.crearReserva();
+						String recogida = input("Ingrese la fecha en que va a recoger el vehículo en el formato (DD/MM/AAAA)");
+						String entrega = input("Ingrese la fecha en que va a entregar el vehículo en el formato (DD/MM/AAAA)");
+						String tipoCarro = input("Ingrese el tipo de vehículo que desea");
+						String sedeDevolucion = input("Ingrese el nombre de la sede donde devolverá el vehículo");
+						String horaEntrega = input("Ingrese la hora en que va a entregar el vehículo");
+						calculadora.crearReserva(recogida, entrega, tipoCarro, sedeDevolucion, horaEntrega);
 						break;
 					case(2):
 						acabado = true;

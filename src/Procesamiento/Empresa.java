@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import Modelo.AdminGeneral;
 import Modelo.AdminLocal;
 import Modelo.Cliente;
+import Modelo.Reserva;
 import Modelo.Sede;
 
 public class Empresa {
@@ -50,7 +51,11 @@ public class Empresa {
 		return cliente;
 	}
 	
-	
+	public Reserva crearReserva(String recogida, String entrega, String tipoCarro, String sedeDevolucion, String horaEntrega) {
+		Double cobroPendiente = 0.0;
+		Reserva reserva = new Reserva(recogida, entrega, tipoCarro, sedeDevolucion, horaEntrega, cobroPendiente);
+		return reserva;
+	}
 	
 	
 }
