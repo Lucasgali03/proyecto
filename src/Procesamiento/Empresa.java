@@ -1,14 +1,17 @@
 package Procesamiento;
 
-import java.util.ArrayList;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import Modelo.AdminGeneral;
 import Modelo.AdminLocal;
+import Modelo.Categoria;
 import Modelo.Cliente;
 import Modelo.Reserva;
 import Modelo.Sede;
+import Modelo.Vehiculo;
 
 public class Empresa {
 	
@@ -16,8 +19,10 @@ public class Empresa {
 	private ArrayList<Cliente> clientes;
 	private ArrayList<Sede> sedes;
 	private ArrayList<AdminLocal> adminlocales;
+	private HashMap<Categoria, ArrayList<Vehiculo>> inventario;
 	
-	public Empresa(ArrayList<Cliente> clientes, ArrayList<AdminLocal> adminlocales, AdminGeneral admingeneral,  ArrayList<Sede> sedes) {
+	
+		public Empresa(ArrayList<Cliente> clientes, ArrayList<AdminLocal> adminlocales, AdminGeneral admingeneral,  ArrayList<Sede> sedes) {
 		this.admingeneral = admingeneral;
 		this.clientes = clientes;
 		this.sedes = sedes;
@@ -58,6 +63,7 @@ public class Empresa {
 		LocalDate date1 = LocalDate.of(Integer.parseInt(recogida.substring(6)), Integer.parseInt(recogida.substring(3,5)), Integer.parseInt(recogida.substring(0, 2)));
 		LocalDate date2 = LocalDate.of(Integer.parseInt(entrega.substring(6)), Integer.parseInt(entrega.substring(3,5)), Integer.parseInt(entrega.substring(0, 2)));
 		long dias = ChronoUnit.DAYS.between(date1, date2);
+		
 		Reserva reserva = new Reserva(recogida, entrega, tipoCarro, sedeDevolucion, horaEntrega, cobroPendiente);
 		return reserva;
 	}
