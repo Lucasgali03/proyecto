@@ -121,9 +121,15 @@ public class Loader {
 					break;
 				}
 			}
+			categoria = new Categoria(linea[5]);
+			if(inventario.containsKey(categoria)) {
+				carros = inventario.get(categoria);
+			}
 			
 			
 			carros.add(new Vehiculo(linea[0], linea[1], linea[2], linea[3], linea[4], categoria, alquilado, linea[7], cliente));
+			
+			inventario.put(categoria, carros);
 			x = br.readLine();
 		}
 		br.close();

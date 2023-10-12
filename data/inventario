@@ -1,15 +1,14 @@
-ABC123;Toyota;Corolla;Rojo;Automático;sedan;0
-XYZ456;Honda;Civic;Azul;Automático;sedan;0
-DEF789;Ford;Mustang;Negro;Manual;lujo;0
-GHI456;Chevrolet;Camaro;Blanco;Automático;lujo;0
-JKL123;Nissan;Altima;Gris;Automático;sedan;0
-MNO789;Volkswagen;Jetta;Plateado;Automático
-PQR456;BMW;X5;Negro;Automático;
-STU123;Audi;A4;Blanco;Automático
-VWX789;Mercedes-Benz;C-Class;Plateado;Automático;lujo;0
-YZA456;Hyundai;Elantra;Gris;Automático
-BCD123;Kia;Sorento;Rojo;Automático
-EFG789;Subaru;Outback;Verde;Automático
-HIJ456;Mazda;CX-50;Azul;Automático
-KLM123;Jeep;Grand Cherokee;Negro;Automático
-NOP789;Tesla;Model S;Blanco;Eléctrico
+ABC123;Toyota;Corolla;Rojo;Automático;sedan;0;19/10/2023-19/10/2024;null
+XYZ456;Honda;Civic;Azul;Automático;sedan;0;19/10/2023-19/10/2024;null
+DEF789;Ford;Mustang;Negro;Manual;lujo;0;19/10/2023-19/10/2024;null
+GHI456;Chevrolet;Camaro;Blanco;Automático;lujo;0;19/10/2023-19/10/2024;null
+JKL123;Nissan;Altima;Gris;Automático;sedan;0;19/10/2023-19/10/2024;null
+MNO789;Volkswagen;Jetta;Plateado;Automático;sedan;0;19/10/2023-19/10/2024;null
+PQR456;BMW;X5;Negro;Automático;lujo;0;19/10/2023-19/10/2024;null
+STU123;Audi;A4;Blanco;Automático;lujo;0;19/10/2023-19/10/2024;null
+VWX789;Mercedes-Benz;C-Class;Plateado;Automático;lujo;0;19/10/2023-19/10/2024;null
+YZA456;Hyundai;Elantra;Gris;Automático;camioneta;19/10/2023-19/10/2024;null
+BCD123;Kia;Sorento;Rojo;Automático;camioneta;0;19/10/2023-19/10/2024;null
+EFG789;Subaru;Outback;Verde;Automático;camioneta;0;19/10/2023-19/10/2024;null
+HIJ456;Mazda;CX-50;Azul;Automático;camioneta;0;19/10/2023-19/10/2024;null
+KLM123;Jeep;Grand Cherokee;Negro;Automático;camioneta;0;19/10/2023-19/10/2024;null
