@@ -1,15 +1,15 @@
-ABC123;Toyota;Corolla;Rojo;Automático
-XYZ456;Honda;Civic;Azul;Automático
-DEF789;Ford;Mustang;Negro;Manual
-GHI456;Chevrolet;Camaro;Blanco;Automático
-JKL123;Nissan;Altima;Gris;Automático
+ABC123;Toyota;Corolla;Rojo;Automático;sedan;0
+XYZ456;Honda;Civic;Azul;Automático;sedan;0
+DEF789;Ford;Mustang;Negro;Manual;lujo;0
+GHI456;Chevrolet;Camaro;Blanco;Automático;lujo;0
+JKL123;Nissan;Altima;Gris;Automático;sedan;0
 MNO789;Volkswagen;Jetta;Plateado;Automático
-PQR456;BMW;X5;Negro;Automático
+PQR456;BMW;X5;Negro;Automático;
 STU123;Audi;A4;Blanco;Automático
-VWX789;Mercedes-Benz;C-Class;Plateado;Automático
+VWX789;Mercedes-Benz;C-Class;Plateado;Automático;lujo;0
 YZA456;Hyundai;Elantra;Gris;Automático
 BCD123;Kia;Sorento;Rojo;Automático
 EFG789;Subaru;Outback;Verde;Automático
-HIJ456;Mazda;CX-5;Azul;Automático
+HIJ456;Mazda;CX-50;Azul;Automático
 KLM123;Jeep;Grand Cherokee;Negro;Automático
 NOP789;Tesla;Model S;Blanco;Eléctrico

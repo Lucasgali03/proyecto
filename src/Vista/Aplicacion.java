@@ -4,11 +4,14 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import Modelo.AdminGeneral;
 import Modelo.AdminLocal;
+import Modelo.Categoria;
 import Modelo.Cliente;
 import Modelo.Sede;
+import Modelo.Vehiculo;
 import Procesamiento.Empresa;
 import Procesamiento.Loader;
 
@@ -22,11 +25,12 @@ public class Aplicacion {
 		ArrayList<AdminLocal> admins = Loader.cargarAdmins();
 		AdminGeneral admin = Loader.cargarAdmin();
 		ArrayList<Sede> sedes = Loader.cargarSedes();
+		HashMap<Categoria, ArrayList<Vehiculo>> inventario = Loader.cargarInventario(clientes);
 		
 		System.out.println("Bienvenido!");
 		System.out.println("1. Cliente\n2. Administrador local\n3. Administrador general");
 		int rol = Integer.parseInt(input("Seleccione la opcion para la que desea iniciar sesion o registrese si no tiene una cuenta"));
-		calculadora = new Empresa(clientes, admins, admin, sedes);
+		calculadora = new Empresa(clientes, admins, admin, sedes, inventario);
 		switch(rol) {
 			case(1):
 				iniciarCliente();
@@ -46,7 +50,7 @@ public class Aplicacion {
 		
 		String login = input("Login");
 		String contrasena = input("Contraseña");
-		Cliente cliente = calculadora.getCliente(login, contrasena);
+		Cliente cliente = calculadora.getCliente(login, contrasena, true);
 		if(cliente != null) {
 			boolean acabado = false;
 			while(!acabado) {

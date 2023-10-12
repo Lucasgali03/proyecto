@@ -6,4 +6,8 @@ public class Categoria {
 	private float tarifaDiaTBaja;
 	private float valorExtraSEde;
 	private float valorExtraConductor;
+	
+	public Categoria() {
+		
+	}
 }

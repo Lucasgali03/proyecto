@@ -22,11 +22,12 @@ public class Empresa {
 	private HashMap<Categoria, ArrayList<Vehiculo>> inventario;
 	
 	
-		public Empresa(ArrayList<Cliente> clientes, ArrayList<AdminLocal> adminlocales, AdminGeneral admingeneral,  ArrayList<Sede> sedes) {
+		public Empresa(ArrayList<Cliente> clientes, ArrayList<AdminLocal> adminlocales, AdminGeneral admingeneral,  ArrayList<Sede> sedes, HashMap<Categoria, ArrayList<Vehiculo>> inventario) {
 		this.admingeneral = admingeneral;
 		this.clientes = clientes;
 		this.sedes = sedes;
 		this.adminlocales = adminlocales;
+		this.inventario = inventario;
 	}
 	
 	public AdminGeneral getAdminGeneral(String login, String contrasena) {
@@ -48,15 +49,28 @@ public class Empresa {
 		return admin;
 	}
 	
-	public Cliente getCliente(String login, String contrasena) {
+	public Cliente getCliente(String login, String contrasena, boolean inicioSesion) {
 		Cliente cliente = null;
+		if(inicioSesion) {
 			for(Cliente i: clientes) {
 				if((i.getLogin().equals(login)) && (i.getContrasena().equals(contrasena))) {
 					return i;
 				}
 			}
+		}
+		else {
+			for(Cliente i: clientes) {
+				if((i.getLogin().equals(login))) {
+					return i;
+				}
+			}
+		}
+
 		return cliente;
 	}
+		
+		
+	
 	
 	public Reserva crearReserva(String recogida, String entrega, String tipoCarro, String sedeDevolucion, String horaEntrega) {
 		Double cobroPendiente = 0.0;
