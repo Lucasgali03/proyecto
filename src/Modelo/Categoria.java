@@ -30,4 +30,9 @@ public class Categoria {
 			this.valorExtraConductor = 20000.0;
 		}
 	}
+	
+	public int getId() {
+		return idCategoria;
+	}
+	
 }

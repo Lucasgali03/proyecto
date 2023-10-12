@@ -104,12 +104,13 @@ public class Loader {
 		HashMap<Categoria, ArrayList<Vehiculo>> inventario = new HashMap<Categoria, ArrayList<Vehiculo>>();
 		ArrayList<Vehiculo> carros = new ArrayList<Vehiculo>();
 		BufferedReader br = new BufferedReader(new FileReader("./data/inventario"));
+		ArrayList<Categoria> categorias = new ArrayList<Categoria>();
 
 		String x = br.readLine();
 		boolean alquilado = false;
 		Categoria categoria = null;
 		Cliente cliente = null;
-		
+
 		while (x != null) {
 			String[] linea =x.split(";");
 			if(linea[6].equals("1")){
@@ -121,14 +122,22 @@ public class Loader {
 					break;
 				}
 			}
+
 			categoria = new Categoria(linea[5]);
+			for(Categoria i: categorias) {
+				if(i.getId() == categoria.getId()) {
+						categoria = i;
+						break;
+					}
+				}
+			categorias.add(categoria);
+
 			if(inventario.containsKey(categoria)) {
 				carros = inventario.get(categoria);
 			}
-			
-			
+
 			carros.add(new Vehiculo(linea[0], linea[1], linea[2], linea[3], linea[4], categoria, alquilado, linea[7], cliente));
-			
+
 			inventario.put(categoria, carros);
 			x = br.readLine();
 		}
