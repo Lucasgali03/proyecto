@@ -50,7 +50,7 @@ public class Aplicacion {
 		if(cliente != null) {
 			boolean acabado = false;
 			while(!acabado) {
-				System.out.println("Bienvenido "+ cliente.getNombre() + "\n1. Crear reserva\n2. Cerrar sesión");
+				System.out.println("Bienvenido/a "+ cliente.getNombre() + "\n1. Crear reserva\n2. Cerrar sesión");
 				int desicion = Integer.parseInt(input("Que desea hacer"));
 				switch(desicion) {
 					case(1):

@@ -23,7 +23,7 @@ public class Loader {
 		while (x != null) {
 			String[] linea = x.split(";");
 			if(linea[0].equals("C")) {
-				clientes.add(new Cliente(linea[1],linea[2],linea[3],linea[4],linea[5],Integer.parseInt(linea[6]), linea[7], linea[8], Integer.parseInt(linea[9]), linea[10], linea[11], linea[12]));
+				clientes.add(new Cliente(linea[1],linea[2],linea[3],linea[4],linea[5],linea[6], linea[7], linea[8], Integer.parseInt(linea[9]), linea[10], linea[11], linea[12]));
 			}
 			
 			x = br.readLine();

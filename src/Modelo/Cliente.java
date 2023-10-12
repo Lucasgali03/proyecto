@@ -9,7 +9,7 @@ public class Cliente implements Usuario{
 	private Tarjeta tarjeta;
 	private Licencia licencia;
 	
-	public Cliente(String login, String contrasena, String nombre, String nacimiento, String nacionalidad, int numTar, String metodo, String vencimientoTar, int numLic, String paisLic, String vencimientoLic, String imagen) {
+	public Cliente(String login, String contrasena, String nombre, String nacimiento, String nacionalidad, String numTar, String metodo, String vencimientoTar, int numLic, String paisLic, String vencimientoLic, String imagen) {
 		this.login = login;
 		this.contrasena = contrasena;
 		this.nombre = nombre;
